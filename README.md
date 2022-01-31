@@ -1,4 +1,4 @@
-# RichAppz SwiftExtensionKit
+# RichAppz PureSwiftExtensionKit
 
 SwiftExtensionKit is to contain generic extension helpers for UIKit and Foundation.
 
@@ -18,7 +18,7 @@ This framework has been developed to help make development faster and more effic
 
 ```ruby
 def pods
-  pod 'SwiftExtensionKit'
+  pod 'PureSwiftExtensionKit'
 end
 
 target '<Project Name>' do
@@ -33,7 +33,7 @@ end
 To use the Core, you will need to import, best to do this in a `bridging-header.h`
 
 ```swift
-import SwiftExtensionKit
+import PureSwiftExtensionKit
 ```
 
 

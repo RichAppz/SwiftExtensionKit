@@ -56,7 +56,7 @@
 		CB09BFD424D441BE009B26D6 /* UIViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewTests.swift; sourceTree = "<group>"; };
 		CB09BFDA24D441E0009B26D6 /* DeviceType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
 		CB09BFDD24D441F5009B26D6 /* Numbers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Numbers.swift; sourceTree = "<group>"; };
-		CB09BFDF24D44310009B26D6 /* SwiftExtensionKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = SwiftExtensionKit.podspec; sourceTree = "<group>"; };
+		CB09BFDF24D44310009B26D6 /* PureSwiftExtensionKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; fileEncoding = 4; path = PureSwiftExtensionKit.podspec; sourceTree = "<group>"; };
 		CB09BFE124D44383009B26D6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CB09BFE324D46175009B26D6 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		CB09BFE424D46175009B26D6 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 		CB09BF8B24D4417A009B26D6 = {
 			isa = PBXGroup;
 			children = (
-				CB09BFDF24D44310009B26D6 /* SwiftExtensionKit.podspec */,
+				CB09BFDF24D44310009B26D6 /* PureSwiftExtensionKit.podspec */,
 				CB09BFE124D44383009B26D6 /* README.md */,
 				CB09BF9724D4417A009B26D6 /* Source */,
 				CB09BFA224D4417A009B26D6 /* ExtensionKitTests */,
