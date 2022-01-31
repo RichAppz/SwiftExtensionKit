@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'SwiftExtensionKit'
-  s.version = '1.0.3'
+  s.version = '1.0.0'
   s.license = 'MIT'
   s.summary = 'SwiftExtensionKit - Foundation and UIKit Helper Extensions'
   s.homepage = 'https://orderpay.com'
