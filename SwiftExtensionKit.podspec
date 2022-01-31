@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version = '1.0.0'
   s.license = 'MIT'
   s.summary = 'SwiftExtensionKit - Foundation and UIKit Helper Extensions'
-  s.homepage = 'https://orderpay.com'
+  s.homepage = 'https://richappz.com'
   s.source = { :git => 'git@github.com:RichAppz/SwiftExtensionKit.git', :tag => s.version }
   s.authors = { 'Rich Mucha' => 'rich@checkfer.com' }
   
