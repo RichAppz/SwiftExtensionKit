@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary = 'SwiftExtensionKit - Foundation and UIKit Helper Extensions'
   s.homepage = 'https://richappz.com'
   s.source = { :git => 'git@github.com:RichAppz/SwiftExtensionKit.git', :tag => s.version }
-  s.authors = { 'Rich Mucha' => 'rich@checkfer.com' }
+  s.authors = { 'Rich Mucha' => 'rich@richappz.com' }
   
   s.ios.deployment_target = '12.0'
   
