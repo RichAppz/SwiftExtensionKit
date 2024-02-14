@@ -54,6 +54,26 @@ public enum DeviceType: String, CaseIterable {
     case iPhone11
     case iPhone11Pro
     case iPhone11ProMax
+    case iPhoneSE2ndGen
+    case iPhone12Mini
+    case iPhone12
+    case iPhone12Pro
+    case iPhone12ProMax
+    case iPhone13Pro
+    case iPhone13ProMax
+    case iPhone13Mini
+    case iPhone13
+    case iPhoneSE3rdGen
+    case iPhone14
+    case iPhone14Plus
+    case iPhone14Pro
+    case iPhone14ProMax
+    case iPhone15
+    case iPhone15Plus
+    case iPhone15Pro
+    case iPhone15ProMax
+    
+    
     case iPodTouch1G
     case iPodTouch2G
     case iPodTouch3G
@@ -138,6 +158,24 @@ public enum DeviceType: String, CaseIterable {
         case .iPhone11: return "iPhone 11"
         case .iPhone11Pro: return "iPhone 11 Pro"
         case .iPhone11ProMax: return "iPhone 11 Pro Max"
+        case .iPhoneSE2ndGen:  return "iPhone SE 2nd Gen"
+        case .iPhone12Mini:  return "iPhone 12 Mini"
+        case .iPhone12:  return "iPhone 12"
+        case .iPhone12Pro:  return "iPhone 12 Pro"
+        case .iPhone12ProMax:  return "iPhone 12 Pro Max"
+        case .iPhone13Pro:  return "iPhone 13 Pro"
+        case .iPhone13ProMax:  return "iPhone 13 Pro Max"
+        case .iPhone13Mini:  return "iPhone 13 Mini"
+        case .iPhone13:  return "iPhone 13"
+        case .iPhoneSE3rdGen:  return "iPhone SE 3rd Gen"
+        case .iPhone14:  return "iPhone 14"
+        case .iPhone14Plus:  return "iPhone 14 Plus"
+        case .iPhone14Pro:  return "iPhone 14 Pro"
+        case .iPhone14ProMax:  return "iPhone 14 Pro Max"
+        case .iPhone15:  return "iPhone 15"
+        case .iPhone15Plus:  return "iPhone 15 Plus"
+        case .iPhone15Pro:  return "iPhone 15 Pro"
+        case .iPhone15ProMax:  return "iPhone 15 Pro Max"
         case .iPodTouch1G: return "iPod Touch 1G"
         case .iPodTouch2G: return "iPod Touch 2G"
         case .iPodTouch3G: return "iPod Touch 3G"
@@ -199,7 +237,24 @@ public enum DeviceType: String, CaseIterable {
         case .iPhone11: return ["iPhone12,1"]
         case .iPhone11Pro: return ["iPhone12,3"]
         case .iPhone11ProMax: return ["iPhone12,5"]
-
+        case .iPhoneSE2ndGen: return ["iPhone12,8"]
+        case .iPhone12Mini: return ["iPhone13,1"]
+        case .iPhone12: return ["iPhone13,2"]
+        case .iPhone12Pro: return ["iPhone13,3"]
+        case .iPhone12ProMax: return ["iPhone13,4"]
+        case .iPhone13Pro: return ["iPhone14,2"]
+        case .iPhone13ProMax: return ["iPhone14,3"]
+        case .iPhone13Mini: return ["iPhone14,4"]
+        case .iPhone13: return ["iPhone14,5"]
+        case .iPhoneSE3rdGen: return ["iPhone14,6"]
+        case .iPhone14: return ["iPhone14,7"]
+        case .iPhone14Plus: return ["iPhone14,8"]
+        case .iPhone14Pro: return ["iPhone15,2"]
+        case .iPhone14ProMax: return ["iPhone15,3"]
+        case .iPhone15: return ["iPhone15,4"]
+        case .iPhone15Plus: return ["iPhone15,5"]
+        case .iPhone15Pro: return ["iPhone16,1"]
+        case .iPhone15ProMax: return ["iPhone16,2"]
         case .iPodTouch1G: return ["iPod1,1"]
         case .iPodTouch2G: return ["iPod2,1"]
         case .iPodTouch3G: return ["iPod3,1"]
