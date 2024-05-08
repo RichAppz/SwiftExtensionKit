@@ -2,7 +2,7 @@
 //  UIDevice+Extension.swift
 //  SwiftExtensionKit
 //
-//  Copyright (c) 2017-2022 RichAppz Limited (https://richappz.com)
+//  Copyright (c) 2017-2024 RichAppz Limited (https://richappz.com)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -73,6 +73,28 @@ public extension UIDevice {
             }
         }
         return optionalString ?? "N/A"
+    }
+    
+    /**
+     Check if a
+     */
+    static var isJailbroken: Bool {
+        #if arch(i386) || arch(x86_64)
+            return false
+        #else
+            let fileManager = FileManager.default
+
+            if (fileManager.fileExists(atPath: "/bin/bash") ||
+                fileManager.fileExists(atPath: "/usr/sbin/sshd") ||
+                fileManager.fileExists(atPath: "/etc/apt") ||
+                fileManager.fileExists(atPath: "/private/var/lib/apt/") ||
+                fileManager.fileExists(atPath: "/Applications/Cydia.app") ||
+                fileManager.fileExists(atPath: "/Library/MobileSubstrate/MobileSubstrate.dylib")) {
+                return true
+            } else {
+                return false
+            }
+        #endif
     }
     
 }

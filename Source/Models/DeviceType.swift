@@ -2,7 +2,7 @@
 //  DeviceType.swift
 //  SwiftExtensionKit
 //
-//  Copyright (c) 2017-2022 RichAppz Limited (https://richappz.com)
+//  Copyright (c) 2017-2024 RichAppz Limited (https://richappz.com)
 //
 //  Permission is hereby granted, free of charge, to any person obtaining a copy
 //  of this software and associated documentation files (the "Software"), to deal
@@ -72,7 +72,6 @@ public enum DeviceType: String, CaseIterable {
     case iPhone15Plus
     case iPhone15Pro
     case iPhone15ProMax
-    
     
     case iPodTouch1G
     case iPodTouch2G
