@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'PureSwiftExtensionKit'
-  s.version = '1.1.1'
+  s.version = '1.1.2'
   s.license = 'MIT'
   s.summary = 'PureSwiftExtensionKit - Foundation and UIKit Helper Extensions'
   s.homepage = 'https://richappz.com'

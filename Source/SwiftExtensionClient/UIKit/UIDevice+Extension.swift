@@ -76,12 +76,18 @@ public extension UIDevice {
     }
     
     /**
-     Check if a
+     Check if a device is jailbroken or not
      */
     static var isJailbroken: Bool {
-        #if arch(i386) || arch(x86_64)
+        #if arch(i386) || arch(x86_64) || os(macOS)
             return false
         #else
+            if #available(iOS 14.0, *) {
+                if ProcessInfo.processInfo.isiOSAppOnMac {
+                    return false
+                }
+            }
+        
             let fileManager = FileManager.default
 
             if (fileManager.fileExists(atPath: "/bin/bash") ||
