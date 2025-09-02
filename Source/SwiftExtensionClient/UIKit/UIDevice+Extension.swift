@@ -31,11 +31,11 @@ public extension UIDevice {
      Checks the config, confirms if the build contains the `DEBUG` flag
      */
     static var isDevelopment: Bool {
-        #if DEBUG
+#if DEBUG
         let isDevelopment = true
-        #else
+#else
         let isDevelopment = false
-        #endif
+#endif
         
         return isDevelopment
     }
@@ -79,28 +79,51 @@ public extension UIDevice {
      Check if a device is jailbroken or not
      */
     static var isJailbroken: Bool {
-        #if arch(i386) || arch(x86_64) || os(macOS)
-            return false
-        #else
-            if #available(iOS 14.0, *) {
-                if ProcessInfo.processInfo.isiOSAppOnMac {
-                    return false
-                }
-            }
-        
-            let fileManager = FileManager.default
-
-            if (fileManager.fileExists(atPath: "/bin/bash") ||
-                fileManager.fileExists(atPath: "/usr/sbin/sshd") ||
-                fileManager.fileExists(atPath: "/etc/apt") ||
-                fileManager.fileExists(atPath: "/private/var/lib/apt/") ||
-                fileManager.fileExists(atPath: "/Applications/Cydia.app") ||
-                fileManager.fileExists(atPath: "/Library/MobileSubstrate/MobileSubstrate.dylib")) {
-                return true
-            } else {
+#if arch(i386) || arch(x86_64) || os(macOS)
+        // Simulator or macOS build
+        return false
+#else
+        // iOS 14+ Mac Catalyst check
+        if #available(iOS 14.0, *) {
+            if ProcessInfo.processInfo.isiOSAppOnMac {
                 return false
             }
-        #endif
+        }
+        
+        let fileManager = FileManager.default
+        
+        // Common jailbreak paths
+        let jailbreakPaths = [
+            "/Applications/Cydia.app",
+            "/Library/MobileSubstrate/MobileSubstrate.dylib",
+            "/bin/bash",
+            "/usr/sbin/sshd",
+            "/etc/apt",
+            "/private/var/lib/apt/"
+        ]
+        for path in jailbreakPaths {
+            if fileManager.fileExists(atPath: path) {
+                return true
+            }
+        }
+        
+        // Check if app can open Cydia URL
+        if let url = URL(string: "cydia://package/com.example.package"),
+           UIApplication.shared.canOpenURL(url) {
+            return true
+        }
+        
+        // Try to write outside the sandbox
+        let testPath = "/private/jailbreak_test.txt"
+        do {
+            try "test".write(toFile: testPath, atomically: true, encoding: .utf8)
+            return true
+        } catch {
+            // Expected to fail on non-jailbroken devices
+        }
+        
+        return false
+#endif
     }
     
 }
